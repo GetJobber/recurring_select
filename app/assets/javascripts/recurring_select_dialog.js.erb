@@ -77,7 +77,7 @@ class RecurringSelectDialog {
   freqInit() {
     this.freq_select = this.outer_holder.querySelector(".rs_frequency");
     const rule_type = this.current_rule.hash && this.current_rule.hash.rule_type
-    if (this.current_rule.hash != null && rule_type != null) {
+    if (rule_type) {
       if (rule_type.search(/Weekly/) !== -1) {
         this.freq_select.selectedIndex = 1
         this.initWeeklyOptions();
